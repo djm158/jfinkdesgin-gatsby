@@ -1,11 +1,8 @@
-import { Box, Flex, Text } from "rebass"
-import { css, jsx } from "@emotion/core"
+import { Box, Flex } from "rebass"
 
 import { Link } from "gatsby"
 import React from "react"
 import styled from "@emotion/styled"
-
-/** @jsx jsx */
 
 const HeaderLink = styled(Link)`
   text-decoration: none;
