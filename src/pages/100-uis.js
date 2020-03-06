@@ -1,12 +1,11 @@
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 import React from "react"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const HundredUi = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="100 UIs" />
   </Layout>
 )
 
-export default IndexPage
+export default HundredUi
