@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby" // to query for image data
 
 import Img from "gatsby-image" // to take image data and render it
+import { LandingColors } from "../components/landingcolors"
 import Layout from "../components/layout"
 import ProjectSection from "../components/projectsection"
 import React from "react"
@@ -12,6 +13,8 @@ const LEFT_TEXT_POS = 10
 
 const Main = styled.div`
   height: 99vh;
+  overflow: hidden;
+  position: relative;
 `
 const HeroText = styled.h1`
   font-size: 200px;
@@ -112,6 +115,7 @@ const IndexPage = () => {
       <Main>
         <HeroText>Jamie</HeroText>
         <SubText>Let’s build something together.</SubText>
+        <LandingColors />
       </Main>
       <ProjectSection
         challengeText={PRANA_CHALLENGE_TEXT}
