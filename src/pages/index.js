@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby" // to query for image data
+import { Link, graphql, useStaticQuery } from "gatsby" // to query for image data
 
 import Img from "gatsby-image" // to take image data and render it
 import { LandingColors } from "../components/landingcolors"
@@ -40,6 +40,53 @@ const SubText = styled.h2`
   }
 `
 
+const ContentDetails = styled.div`
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  top: 80%;
+
+  h3 {
+    color: #fff;
+  }
+`
+
+const StyledImg = styled(Img)`
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+`
+
+const Content = styled.div`
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+
+  &:hover {
+    ${ContentDetails} {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+    ${StyledImg} {
+      filter: blur(5px);
+    }
+  }
+`
+
 const PRANA_CHALLENGE_TEXT = `Using the Build-Measure-Learn design process,
                               create a prototype of a habit-forming application that
                               encourages better wellness decisions by Jefferson University
@@ -74,8 +121,15 @@ const findImage = (data, name) => {
   return data.allFile.edges.find(image => image.node.base === name)
 }
 
-const createImg = (node, alt) => (
-  <Img fluid={node.childImageSharp.fluid} alt={alt} />
+const createImg = (node, alt, title, path) => (
+  <Content>
+    <Link to={path}>
+      <StyledImg fluid={node.childImageSharp.fluid} alt={alt} />
+      <ContentDetails>
+        <h3>{title || "TESTING"}</h3>
+      </ContentDetails>
+    </Link>
+  </Content>
 )
 
 const IndexPage = () => {
@@ -105,10 +159,10 @@ const IndexPage = () => {
   const { node: evolveImageSharp } = findImage(data, "macbook-mock-evolve.png")
   const { node: sleepRingImageSharp } = findImage(data, "sleep-ring.png")
   const { node: uniqloImageSharp } = findImage(data, "uniqlo-mockup-phone.png")
-  const pranaImage = createImg(pranaImageSharp, "Prana App Image")
-  const evolveImage = createImg(evolveImageSharp, "Evolve App Image")
-  const sleepRingImage = createImg(sleepRingImageSharp, "Sleep Ring App Image")
-  const uniqloImage = createImg(uniqloImageSharp, "Uniqlo App Image")
+  const pranaImage = createImg(pranaImageSharp, "Prana App Image", "Prana", "/prana")
+  const evolveImage = createImg(evolveImageSharp, "Evolve App Image", "Evolve", "/evolve")
+  const sleepRingImage = createImg(sleepRingImageSharp, "Sleep Ring App Image", "Sleep Ring", "/sleep-ring")
+  const uniqloImage = createImg(uniqloImageSharp, "Uniqlo App Image", "Uniqlo", "/uniqlo")
   return (
     <Layout>
       <SEO title="Home" />

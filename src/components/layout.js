@@ -21,7 +21,20 @@ import styled from "@emotion/styled"
 library.add(fab, faEnvelope)
 
 const Footer = styled.footer`
-  height: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > svg {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
 `
 
 const Layout = ({ children }) => {
@@ -50,6 +63,10 @@ const Layout = ({ children }) => {
         />
         <FontAwesomeIcon
           icon={["fab", "medium-m"]}
+          style={{ color: "#000000", height: "50px", width: "50px" }}
+        />
+        <FontAwesomeIcon
+          icon={["fab", "github"]}
           style={{ color: "#000000", height: "50px", width: "50px" }}
         />
         <FontAwesomeIcon
