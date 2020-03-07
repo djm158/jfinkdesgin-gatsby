@@ -62,8 +62,13 @@ const Links = styled(Box)`
 `
 
 const StyledHeader = styled.header`
+  background: #fff;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 1.45rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 `
 
 const Header = () => (
@@ -75,13 +80,13 @@ const Header = () => (
         <Links>
           <Box>
             <Dropdown>
-              <HeaderLink as="div">Work</HeaderLink>
+              <HeaderLink as="div" to="/">Work</HeaderLink>
               <DropdownContent>
-                <HeaderLink to="prana">Prana</HeaderLink>
-                <HeaderLink to="evolve">Evolve</HeaderLink>
-                <HeaderLink to="sleep-ring">Sleep Ring</HeaderLink>
-                <HeaderLink to="uniqlo">Uniqlo</HeaderLink>
-                <HeaderLink to="100-uis">100 UIs</HeaderLink>
+                <HeaderLink to="/prana">Prana</HeaderLink>
+                <HeaderLink to="/evolve">Evolve</HeaderLink>
+                <HeaderLink to="/sleep-ring">Sleep Ring</HeaderLink>
+                <HeaderLink to="/uniqlo">Uniqlo</HeaderLink>
+                <HeaderLink to="/100-uis">100 UIs</HeaderLink>
               </DropdownContent>
             </Dropdown>
           </Box>
