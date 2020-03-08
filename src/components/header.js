@@ -64,7 +64,6 @@ const Links = styled(Box)`
 const StyledHeader = styled.header`
   background: #fff;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1.45rem;
   position: fixed;
   top: 0;
   width: 100%;

@@ -16,8 +16,13 @@ import React from "react"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { library } from "@fortawesome/fontawesome-svg-core"
+import styled from "@emotion/styled"
 
 library.add(fab, faEnvelope)
+
+export const HeaderBox = styled.div`
+  margin-bottom: 60px;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

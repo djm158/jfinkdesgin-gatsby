@@ -24,6 +24,7 @@ const StyledFooter = styled.footer`
     &:hover {
       cursor: pointer;
       opacity: 0.5;
+      transition: opacity 0.3s ease;
     }
     @media (max-width: 576px) {
       height: 30px;
