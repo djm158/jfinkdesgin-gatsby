@@ -24,7 +24,7 @@ const HeroText = styled.h1`
   top: ${TOP_TEXT_POS}%;
   left: ${LEFT_TEXT_POS}%;
   @media (max-width: 576px) {
-    font-size: 100px;
+    font-size: 80px;
   }
 `
 
@@ -35,7 +35,9 @@ const SubText = styled.h2`
   top: ${TOP_TEXT_POS}%;
   left: calc(${LEFT_TEXT_POS}% + 5%);
   @media (max-width: 576px) {
-    font-size: 30px;
+    font-size: 24px;
+    max-width: 325px;
+    margin-top: -5px;
   }
 `
 
@@ -69,6 +71,9 @@ export const UNIQLO_CHALLENGE_TEXT = `Your company’s leadership team has ident
 
 export const UNIQLO_SOLUTION_TEXT = `A complete redesign of Uniqlo’s mobile app home page, focusing more on clear navigation and search bar access.`
 
+export const ONEHUNDRED_CHALLENGE_TEXT = `Become a better designer! 100 days of UI helps me get creative in a structured way.`
+export const ONEHUNDRED_SOLUTION_TEXT = `(Always) in progress.`
+
 const findImage = (data, name) => {
   return data.allFile.edges.find(image => image.node.base === name)
 }
@@ -100,6 +105,7 @@ const IndexPage = () => {
   const { node: evolveImageSharp } = findImage(data, "macbook-mock-evolve.png")
   const { node: sleepRingImageSharp } = findImage(data, "sleep-ring.png")
   const { node: uniqloImageSharp } = findImage(data, "uniqlo-mockup-phone.png")
+  const { node: oneHundredImageSharp } = findImage(data, "ui-100.png")
 
   return (
     <Layout>
@@ -131,6 +137,8 @@ const IndexPage = () => {
         solutionText={SLEEP_RING_SOLUTION_TEXT}
         image={sleepRingImageSharp.childImageSharp.fluid}
         reverse
+        title="Sleep Ring"
+        route="/sleep-ring"
         background="linear-gradient(135deg,  #9CC0E7 0%,#FFFFFF 100%)"
       />
       <ProjectSection
@@ -138,6 +146,17 @@ const IndexPage = () => {
         solutionText={UNIQLO_SOLUTION_TEXT}
         image={uniqloImageSharp.childImageSharp.fluid}
         background="linear-gradient(-45deg,  #EC1E23 0%,#FFFFFF 100%)"
+        title="Uniqlo"
+        route="/uniqlo"
+      />
+      <ProjectSection
+        challengeText={ONEHUNDRED_CHALLENGE_TEXT}
+        solutionText={ONEHUNDRED_SOLUTION_TEXT}
+        image={oneHundredImageSharp.childImageSharp.fluid}
+        background="linear-gradient(135deg,  #FC7B40 0%,#FFFFFF 100%)"
+        title="100 UIs"
+        route="/100-uis"
+        reverse
       />
     </Layout>
   )

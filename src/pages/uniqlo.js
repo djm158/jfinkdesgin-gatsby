@@ -32,6 +32,8 @@ const SleepRing = () => {
         title="Uniqlo"
         route="/uniqlo"
         background="linear-gradient(-45deg,  #FC7B40 0%,#FFFFFF 100%)"
+        stack
+        reverse
       />
     </Layout>
   )

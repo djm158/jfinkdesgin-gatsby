@@ -22,13 +22,13 @@ const Row = styled.div`
   max-width: 100%;
   margin: 0 auto;
   background: ${props => props.background};
+  min-height: 400px;
 
   @media (max-width: 576px) {
     flex-direction: ${props => props.stack ? `column` : `row`};
     ${Column}:first-of-type {
       display: none;
       display: ${props => props.stack ? `flex` : `none`};
-
     }
   }
 `
