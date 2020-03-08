@@ -12,7 +12,7 @@ const TOP_TEXT_POS = 20
 const LEFT_TEXT_POS = 10
 
 const Main = styled.div`
-  height: 99vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 `
