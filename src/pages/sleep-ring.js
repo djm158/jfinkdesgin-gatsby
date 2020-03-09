@@ -31,7 +31,7 @@ const SleepRing = () => {
         image={data.file.childImageSharp.fluid}
         title="Evolve"
         route="/evolve"
-        background="linear-gradient(-45deg,  #FC7B40 0%,#FFFFFF 100%)"
+        background="linear-gradient(135deg,  #9CC0E7 0%,#FFFFFF 100%)"
         stack
         reverse
       />

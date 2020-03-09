@@ -31,7 +31,8 @@ const SleepRing = () => {
         image={data.file.childImageSharp.fluid}
         title="Uniqlo"
         route="/uniqlo"
-        background="linear-gradient(-45deg,  #FC7B40 0%,#FFFFFF 100%)"
+        background="linear-gradient(180deg, #EC1E23 0%,#FFFFFF 100%)"
+        imgBackground="#EC1E23"
         stack
         reverse
       />

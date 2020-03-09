@@ -14,10 +14,11 @@ const HeaderLink = styled(Link, {
 }))
 
 const DropdownContent = styled(Box)`
-  display: none;
   position: absolute;
   background: #ffffff;
   z-index: 1;
+  display: none;
+  margin-left: 1rem;
 
   & > ${HeaderLink} {
     margin: 0;
@@ -32,9 +33,8 @@ const DropdownContent = styled(Box)`
 const Dropdown = styled(Box)`
   &:hover {
     ${DropdownContent} {
-      display: flex;
       flex-direction: column;
-      margin-left: 1rem;
+      display: flex;
     }
   }
 `
@@ -100,6 +100,7 @@ const OverlayContainer = styled.div`
     text-transform: capitalize;
     font-size: 36px;
     flex-grow: 1;
+    border-bottom: 1px solid #ddd;
     &:hover {
       background: #ddd;
       transition: all 0.3s ease;
@@ -108,7 +109,6 @@ const OverlayContainer = styled.div`
 `
 
 const HeaderAnchor = HeaderLink.withComponent("a")
-const HeaderText = HeaderLink.withComponent("p")
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -149,7 +149,7 @@ const Header = () => {
           <Links>
             <Box>
               <Dropdown>
-                <HeaderText>Work</HeaderText>
+                <HeaderLink to="/">Work</HeaderLink>
                 <DropdownContent>
                   <HeaderLink to="/prana">Prana</HeaderLink>
                   <HeaderLink to="/evolve">Evolve</HeaderLink>

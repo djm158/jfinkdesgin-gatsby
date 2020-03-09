@@ -122,7 +122,8 @@ const IndexPage = () => {
         title="Prana"
         route="/prana"
         reverse
-        background="linear-gradient(135deg,  #89BFD6 0%,#FFFFFF 100%)"
+        background="linear-gradient(135deg, #89BFD6 0%,#FFFFFF 100%)"
+        imgBackground="#89BFD6"
       />
       <ProjectSection
         challengeText={EVOLVE_CHALLENGE_TEXT}
@@ -130,7 +131,8 @@ const IndexPage = () => {
         image={evolveImageSharp.childImageSharp.fluid}
         title="Evolve"
         route="/evolve"
-        background="linear-gradient(-45deg,  #FC7B40 0%,#FFFFFF 100%)"
+        background="linear-gradient(-45deg, #FC7B40 0%,#FFFFFF 100%)"
+        imgBackground="#FC7B40"
       />
       <ProjectSection
         challengeText={SLEEP_RING_CHALLENGE_TEXT}
@@ -139,13 +141,15 @@ const IndexPage = () => {
         reverse
         title="Sleep Ring"
         route="/sleep-ring"
-        background="linear-gradient(135deg,  #9CC0E7 0%,#FFFFFF 100%)"
+        imgBackground="#9CC0E7"
+        background="linear-gradient(135deg, #9CC0E7 0%,#FFFFFF 100%)"
       />
       <ProjectSection
         challengeText={UNIQLO_CHALLENGE_TEXT}
         solutionText={UNIQLO_SOLUTION_TEXT}
         image={uniqloImageSharp.childImageSharp.fluid}
-        background="linear-gradient(-45deg,  #EC1E23 0%,#FFFFFF 100%)"
+        background="linear-gradient(-45deg, #EC1E23 0%,#FFFFFF 100%)"
+        imgBackground="#EC1E23"
         title="Uniqlo"
         route="/uniqlo"
       />
@@ -153,7 +157,8 @@ const IndexPage = () => {
         challengeText={ONEHUNDRED_CHALLENGE_TEXT}
         solutionText={ONEHUNDRED_SOLUTION_TEXT}
         image={oneHundredImageSharp.childImageSharp.fluid}
-        background="linear-gradient(135deg,  #FC7B40 0%,#FFFFFF 100%)"
+        background="linear-gradient(135deg, #FEE157 0%,#FFFFFF 100%)"
+        imgBackground="#FEE157"
         title="100 UIs"
         route="/100-uis"
         reverse

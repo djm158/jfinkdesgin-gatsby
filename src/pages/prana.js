@@ -28,7 +28,8 @@ const Prana = () => {
         title="Prana"
         route="/prana"
         reverse
-        background="linear-gradient(135deg,  #89BFD6 0%,#FFFFFF 100%)"
+        background="linear-gradient(135deg, #89BFD6 0%,#FFFFFF 100%)"
+        imgBackground="#89BFD6"
         stack
       />
       <SEO title="Prana" />

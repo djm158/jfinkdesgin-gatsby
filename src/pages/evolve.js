@@ -29,6 +29,7 @@ const Evolve = () => {
         title="Evolve"
         route="/evolve"
         background="linear-gradient(-45deg,  #FC7B40 0%,#FFFFFF 100%)"
+        imgBackground="#FC7B40"
         stack
         reverse
       />

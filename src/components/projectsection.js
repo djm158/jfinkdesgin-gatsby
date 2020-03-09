@@ -11,6 +11,10 @@ const Column = styled.div`
   justify-content: center;
   order: ${props => (props.reverse ? 1 : 0)};
   width: 100%;
+  padding: 1rem;
+  @media (max-width: 576px) {
+    background: ${props => props.background};
+  }
 `
 
 const Row = styled.div`
@@ -18,17 +22,16 @@ const Row = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1rem;
   max-width: 100%;
   margin: 0 auto;
   background: ${props => props.background};
   min-height: 400px;
 
   @media (max-width: 576px) {
-    flex-direction: ${props => props.stack ? `column` : `row`};
+    flex-direction: ${props => (props.stack ? `column` : `row`)};
     ${Column}:first-of-type {
       display: none;
-      display: ${props => props.stack ? `flex` : `none`};
+      display: ${props => (props.stack ? `flex` : `none`)};
     }
   }
 `
@@ -98,18 +101,18 @@ const ProjectSection = props => {
     route,
     title,
     reverse,
-    stack
+    stack,
+    imgBackground,
   } = props
   return (
     <Row background={background} stack={stack}>
-      <Column reverse={reverse}>
+      <Column reverse={reverse} background="#fff">
         <Heading>Challenge</Heading>
         <Text>{challengeText}</Text>
         <Heading>Solution</Heading>
         <Text>{solutionText}</Text>
       </Column>
-      <Column reverse={!reverse}>
-        {" "}
+      <Column reverse={!reverse} background={imgBackground}>
         <Content>
           <Link to={route}>
             <StyledImg fluid={image} alt={`${title} App Image`} />
