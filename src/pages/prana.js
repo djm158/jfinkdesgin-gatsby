@@ -2,6 +2,8 @@ import Layout, { HeaderBox } from "../components/layout"
 import { PRANA_CHALLENGE_TEXT, PRANA_SOLUTION_TEXT } from "../pages/index"
 import { graphql, useStaticQuery } from "gatsby"
 
+import CircleRow from "../components/circlerow"
+import CircleText from "../components/circletext"
 import ProjectSection from "../components/projectsection"
 import React from "react"
 import SEO from "../components/seo"
@@ -20,6 +22,7 @@ const Prana = () => {
   `)
   return (
     <Layout>
+      <SEO title="Prana" />
       <HeaderBox />
       <ProjectSection
         challengeText={PRANA_CHALLENGE_TEXT}
@@ -32,7 +35,29 @@ const Prana = () => {
         imgBackground="#89BFD6"
         stack
       />
-      <SEO title="Prana" />
+      <CircleRow>
+        <CircleText background="#83bad7" color="white">
+          Brainstorm
+        </CircleText>
+        <CircleText background="#83bad7" color="white">
+          Ideation Poster
+        </CircleText>
+        <CircleText background="#83bad7" color="white">
+          Scope & Structure
+        </CircleText>
+        <CircleText background="#83bad7" color="white">
+          Wireframes
+        </CircleText>
+        <CircleText background="#83bad7" color="white">
+          Mood Board
+        </CircleText>
+        <CircleText background="#83bad7" color="white">
+          Desirability Assessment
+        </CircleText>
+        <CircleText background="#83bad7" color="white">
+          Hi-fidelity Prototypes
+        </CircleText>
+      </CircleRow>
     </Layout>
   )
 }

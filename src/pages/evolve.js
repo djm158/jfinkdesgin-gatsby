@@ -2,6 +2,8 @@ import { EVOLVE_CHALLENGE_TEXT, EVOLVE_SOLUTION_TEXT } from "../pages/index"
 import Layout, { HeaderBox } from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
 
+import CircleRow from "../components/circlerow"
+import CircleText from "../components/circletext"
 import ProjectSection from "../components/projectsection"
 import React from "react"
 import SEO from "../components/seo"
@@ -33,6 +35,32 @@ const Evolve = () => {
         stack
         reverse
       />
+      <CircleRow>
+        <CircleText background="#fe7b36" color="white">
+          Discover & Define
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          Problem & “How Might We”
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          Identify Personas
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          Current Workflow Diagram
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          Wireframes
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          UI Kit
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          Hi-fidelity Prototypes
+        </CircleText>
+        <CircleText background="#fe7b36" color="white">
+          Front-end Developed Prototype
+        </CircleText>
+      </CircleRow>
     </Layout>
   )
 }

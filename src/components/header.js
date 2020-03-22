@@ -116,7 +116,7 @@ const Header = () => {
     <StyledHeader>
       <Overlay open={mobileMenuOpen}>
         <OverlayContainer>
-          <HeaderLink to="/prana" onClick={() => setMobileMenuOpen(false)}>
+          <HeaderLink to="/" onClick={() => setMobileMenuOpen(false)}>
             Home
           </HeaderLink>
           <HeaderLink to="/prana" onClick={() => setMobileMenuOpen(false)}>

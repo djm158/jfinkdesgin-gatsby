@@ -5,6 +5,8 @@ import {
 } from "../pages/index"
 import { graphql, useStaticQuery } from "gatsby"
 
+import CircleRow from "../components/circlerow"
+import CircleText from "../components/circletext"
 import ProjectSection from "../components/projectsection"
 import React from "react"
 import SEO from "../components/seo"
@@ -35,6 +37,20 @@ const SleepRing = () => {
         stack
         reverse
       />
+      <CircleRow>
+        <CircleText background="#9cc0ea" color="white">
+          Interviews
+        </CircleText>
+        <CircleText background="#9cc0ea" color="white">
+          Problem & “How Might We”
+        </CircleText>
+        <CircleText background="#9cc0ea" color="white">
+          Product Opportunity
+        </CircleText>
+        <CircleText background="#9cc0ea" color="white">
+          Product Design
+        </CircleText>
+      </CircleRow>
     </Layout>
   )
 }
