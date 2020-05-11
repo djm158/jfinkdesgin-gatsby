@@ -1,4 +1,4 @@
-import Img from "gatsby-image" // to take image data and render it
+import Img from "gatsby-image"
 import { Link } from "gatsby"
 import React from "react"
 import styled from "@emotion/styled"
@@ -67,7 +67,7 @@ const ContentDetails = styled.div`
   }
 `
 
-const StyledImg = styled(Img)`
+const BlurInImage = styled(Img)`
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
@@ -86,7 +86,7 @@ const Content = styled.div`
       left: 50%;
       opacity: 1;
     }
-    ${StyledImg} {
+    ${BlurInImage} {
       filter: blur(5px);
     }
   }
@@ -115,7 +115,7 @@ const ProjectSection = props => {
       <Column reverse={!reverse} background={imgBackground}>
         <Content>
           <Link to={route}>
-            <StyledImg fluid={image} alt={`${title} App Image`} />
+            <BlurInImage fluid={image} alt={`${title} App Image`} />
             <ContentDetails>
               <h3>{title}</h3>
             </ContentDetails>

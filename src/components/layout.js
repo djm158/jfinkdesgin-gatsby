@@ -20,7 +20,7 @@ import styled from "@emotion/styled"
 
 library.add(fab, faEnvelope)
 
-export const HeaderBox = styled.div`
+const HeaderBox = styled.div`
   margin-bottom: 60px;
 `
 
@@ -38,6 +38,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <HeaderBox />
       <main>{children}</main>
       <Footer />
     </>

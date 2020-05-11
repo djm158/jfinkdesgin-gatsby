@@ -1,9 +1,9 @@
 import { EVOLVE_CHALLENGE_TEXT, EVOLVE_SOLUTION_TEXT } from "../pages/index"
-import Layout, { HeaderBox } from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
 
 import CircleRow from "../components/circlerow"
 import CircleText from "../components/circletext"
+import Layout from "../components/layout"
 import ProjectSection from "../components/projectsection"
 import React from "react"
 import SEO from "../components/seo"
@@ -23,7 +23,6 @@ const Evolve = () => {
   return (
     <Layout>
       <SEO title="Evolve" />
-      <HeaderBox />
       <ProjectSection
         challengeText={EVOLVE_CHALLENGE_TEXT}
         solutionText={EVOLVE_SOLUTION_TEXT}

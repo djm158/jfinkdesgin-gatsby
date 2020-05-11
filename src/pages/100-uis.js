@@ -1,7 +1,7 @@
-import Layout, { HeaderBox } from "../components/layout"
 import { ONEHUNDRED_CHALLENGE_TEXT, ONEHUNDRED_SOLUTION_TEXT } from "../pages/index"
 import { graphql, useStaticQuery } from "gatsby"
 
+import Layout from "../components/layout"
 import ProjectSection from "../components/projectsection"
 import React from "react"
 import SEO from "../components/seo"
@@ -21,7 +21,6 @@ const HundredUis = () => {
   return (
     <Layout>
       <SEO title="100 Uis" />
-      <HeaderBox />
       <ProjectSection
         challengeText={ONEHUNDRED_CHALLENGE_TEXT}
         solutionText={ONEHUNDRED_SOLUTION_TEXT}

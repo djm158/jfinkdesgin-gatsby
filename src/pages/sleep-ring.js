@@ -1,4 +1,3 @@
-import Layout, { HeaderBox } from "../components/layout"
 import {
   SLEEP_RING_CHALLENGE_TEXT,
   SLEEP_RING_SOLUTION_TEXT,
@@ -7,6 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import CircleRow from "../components/circlerow"
 import CircleText from "../components/circletext"
+import Layout from "../components/layout"
 import ProjectSection from "../components/projectsection"
 import React from "react"
 import SEO from "../components/seo"
@@ -26,7 +26,6 @@ const SleepRing = () => {
   return (
     <Layout>
       <SEO title="Sleep Ring" />
-      <HeaderBox />
       <ProjectSection
         challengeText={SLEEP_RING_CHALLENGE_TEXT}
         solutionText={SLEEP_RING_SOLUTION_TEXT}
